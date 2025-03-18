@@ -1,0 +1,22 @@
+<!--    using querySelectorAll method   -->
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML elements by Query Selector</p>
+<p class="intro">Hello World!</p>
+<p class="intro">This example demostrates the <b>querySelectorAll</b> method.</p>
+
+<p id="demo"></p>
+
+<script>
+const x = document.querySelectorAll("p.intro");
+document.getElementById("demo").innerHTML='The first paragraph (index 0) with class="intro" is: '+ x[0].innerHTML;
+</script>
+
+</body>
+</html>
+
+<!--    used querySelectorAll method to grab all the p elements with class intro and then changed the 
+    innerHTML of p element with id demo     -->
