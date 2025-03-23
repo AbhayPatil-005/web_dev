@@ -1,0 +1,21 @@
+<!--    changing the value of an attribute     -->
+<!DOCTYPE html>
+<html>
+<body>
+<img id="myImage" src="smiley.gif" alt="not present">
+
+<p id="display"></p>
+
+<script>
+document.getElementById("myImage").src="landscape.gif"
+document.getElementById("display").innerText = document.getElementById("myImage").src;
+</script>
+
+
+<p>The original image was smiley.gif, but the script changed it to landscape.gif</p>
+
+</body>
+</html>
+<!--    The HTML document above contains an <img> element with id="myImage"
+We use the HTML DOM to get the element with id="myImage"
+A JavaScript changes the src attribute of that element from "smiley.gif" to "landscape.jpg" -->
