@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Learning about Event Handlers in JavaScript -->
+<html>
+    <head>
+        <title>Event Handlers</title>
+        <style>
+            /* Center everything in the body */
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+                gap: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Created a circular button to represent the bulb -->
+        <button id="show" style="border-radius: 100%; width: 100px; height: 100px;"></button><br>
+
+        <!-- "On" and "Off" buttons to control the bulb -->
+        <button type="button" onclick="bulbOn()" id="on">On</button>
+        <button type="button" onclick="bulbOff()" id="off">Off</button>
+
+        <script>
+            // Get the 'bulb' button by ID
+            const show = document.getElementById("show");
+
+            // Function to turn the bulb ON (changes background to yellow)
+            function bulbOn() {
+                show.style.backgroundColor = "yellow";  
+            }
+
+            // Function to turn the bulb OFF (changes background to white)
+            function bulbOff() {
+                show.style.background = "white"; 
+            }
+        </script>
+    </body>
+</html>
+
+<!-- Summary:
+     1️⃣ Used an 'onclick' event to trigger functions when buttons are clicked.
+     2️⃣ 'bulbOn()' turns the bulb yellow (ON).
+     3️⃣ 'bulbOff()' turns the bulb white (OFF).
+     4️⃣ Event handling is used to update styles dynamically.
+-->
