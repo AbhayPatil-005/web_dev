@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- Practice example on how the HTML event handler "onselect" works -->
+<html>
+    <body>
+        <!-- Explanation of what the example demonstrates -->
+        <p>Assigned an "onselect" attribute to the input field.</p>
+
+        <!-- Input field where the user can select text -->
+        Select some text: 
+        <input type="text" value="Hello world!" onselect="show(event)">
+
+        <!-- Paragraph where the message will be displayed when text is selected -->
+        <p id="demo"></p>
+
+        <script>
+            // Function triggered when text inside the input field is selected
+            function show(event) {
+                // Updates the paragraph with a message
+                document.getElementById("demo").innerHTML = "You selected some text";
+            }
+        </script>
+    </body>
+</html>
+
+<!-- Summary:
+    1️⃣ The "onselect" event fires when a user selects (highlights) text inside the input field.
+    2️⃣ The 'show()' function updates the paragraph with a message.
+    3️⃣ The event handler is attached directly to the input field.
+    4️⃣ Useful for detecting text selection in form fields (e.g., search bars, text areas).
+-->
