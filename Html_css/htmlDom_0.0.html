@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--    
+    Learning about the "onkeydown" event.
+    The "onkeydown" event is triggered when a key is pressed down inside an input field.
+-->
+
+<html>
+    <body>
+        <h1>HTML DOM EVENTS</h1>
+        <h2>The onkeydown Event</h2>
+
+        <p>Press a key in the input field:</p>
+
+        <!-- When a key is pressed inside this input field, the u_pressed() function is triggered -->
+        <input type="text" onkeydown="u_pressed(event)">
+        
+        <p id="demo"></p> <!-- This paragraph will display the output message -->
+
+        <script>
+            // Function to handle the "onkeydown" event
+            function u_pressed(event) {
+                // Updating the content of the paragraph with id="demo"
+                document.getElementById("demo").innerHTML = "You pressed a key inside the input field";
+            }
+        </script>
+
+    </body>
+</html>
