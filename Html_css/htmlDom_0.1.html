@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--    
+    Learning about the "onkeyup" event.
+    The "onkeyup" event is triggered when a key is released after being pressed inside an input field.
+-->
+
+<html>
+<body>
+    <h1>HTML DOM EVENTS</h1>
+    <h2>The Keyup Event</h2>
+
+    <p>A function is triggered when the user releases a key in the input field.</p>
+    <p>The function transforms the input field text to uppercase.</p>
+
+    <!-- When a key is released inside this input field, the "fname" function is triggered -->
+    Enter your name: <input type="text" id="fname" onkeyup="fname(event)">
+
+    <script>
+        // Function to handle the "onkeyup" event
+        function fname(event) {
+            // Selecting the input field using its ID
+            const x = document.getElementById("fname");
+
+            // Converting the entered text to uppercase
+            x.value = x.value.toUpperCase();
+        }
+    </script> 
+</body>
+</html>
