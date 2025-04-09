@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<!--    Learning about the "Resize" event.  -->
+<!--  
+    Learning about the "resize" event in HTML.
+    This event triggers a function whenever the browser window is resized.
+-->
 
 <html>
-<body onresize="myFunction()">
-    
+<body onresize="myFunction()"> <!-- When the browser window is resized, myFunction() will be triggered -->
+
     <p>Assign an "onresize" event to a body element.</p>
-    <p>try to resize the browser window.</p>
-    <p>Window resized <span id="demo">0</span>times.</p>
+    <p>Try to resize the browser window.</p>
+
+    <!-- This <span> will display how many times the window has been resized -->
+    <p>Window resized <span id="demo">0</span> times.</p>
 
     <script>
-    var x = 0;
-    function myFunction(){
-        var txt = x += 1;
-        document.getElementById("demo").innerHTML = txt;
-    }
+        // Initialize a counter variable to track number of resizes
+        var x = 0;
+
+        // Function to update the counter and display it
+        function myFunction() {
+            var txt = x += 1;  // Increment the counter
+            document.getElementById("demo").innerHTML = txt;  // Update the content of the span with new value
+        }
     </script>
 </body>
 </html>
