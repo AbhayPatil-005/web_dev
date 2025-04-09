@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--    Learning about the "Resize" event.  -->
+
+<html>
+<body onresize="myFunction()">
+    
+    <p>Assign an "onresize" event to a body element.</p>
+    <p>try to resize the browser window.</p>
+    <p>Window resized <span id="demo">0</span>times.</p>
+
+    <script>
+    var x = 0;
+    function myFunction(){
+        var txt = x += 1;
+        document.getElementById("demo").innerHTML = txt;
+    }
+    </script>
+</body>
+</html>
