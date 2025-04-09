@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--  
+    Learning about the "onreset" event in HTML.
+    This event triggers a function when the form is reset.
+-->
+
+<html>
+    <body>
+        <!-- Descriptive message for the user -->
+        <p>When you reset the form, a function is triggered which alerts some text.</p>
+       
+        <!-- Form element with an onreset event handler -->
+        <form onreset="myFunction()">
+            <!-- Input field for the user to enter their name -->
+            Enter name: <input type="text">
+            
+            <!-- Reset button: when clicked, it clears the form and triggers the onreset event -->
+            <button type="reset">Reset</button>
+        </form>
+
+        <script>
+            // Function that runs when the form is reset
+            function myFunction(){
+                alert("The form was reset");  // Show an alert box to the user
+            }
+        </script>
+    </body>
+</html>
