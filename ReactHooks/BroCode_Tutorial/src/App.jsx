@@ -1,14 +1,16 @@
-import Students from "./Components/Students";
+// Conditional Rendering in React = Rendering components or elements based on certain conditions.
+
+import HomePage from "./Components/HomePage"
+import { useState } from "react"
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   return (
-    <div className="cards">
-      <Students name="SpongeBob" age="20" student={true} />
-      <Students name="Patrick" age="34" student={false} />
-      <Students name="Squidward" age="40" student={false} />
-      <Students name="Sandy" age={27} student={true} />
-    </div>
+    <>
+    <HomePage isLoggedIn={isLoggedIn}/>
+    <button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log In/Log Out</button>
+    </>
   )
 }
 
