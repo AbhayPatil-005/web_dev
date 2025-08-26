@@ -1,13 +1,12 @@
-// Conditional Rendering in React = Rendering components or elements based on certain conditions.
-
-import List from "./Components/List"
+// addindg a button component with a click event
+import Button from "./Components/Button"
 
 function App() {
 
 
   return (
     <>
-      <List/>
+      <Button/>
     </>
   )
 }
