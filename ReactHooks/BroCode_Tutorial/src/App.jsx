@@ -1,12 +1,11 @@
-// addindg a button component with a click event
-import Button from "./Components/Button"
+// This is the main application component that renders the Counter component.
+import Counter from "./Components/Counter"
 
 function App() {
 
-
   return (
     <>
-      <Button/>
+      <Counter/>
     </>
   )
 }
