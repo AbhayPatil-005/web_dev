@@ -3,12 +3,20 @@
 const productpage=async({params})=>{
 
     const {id} = await params;
-    return (
-        <>
-        <h1>
-            Content coming soon: {id}
+    const res = await fetch(`https://dummyjson.com/products/${id}`,{
+        cache:"force-cache",
+    })
 
-            </h1></>
+    const product = await res.json();
+
+    return (
+        <div>
+            <h1>{product.title}</h1>
+            <p>{product.description}</p>
+            <p><strong>Price: </strong> ${product.price}</p>
+
+            <a href='/products'> Back to products</a>
+        </div>
     )
 }
 

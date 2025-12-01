@@ -1,17 +1,24 @@
 import Link from "next/link";
 
-export default function ProductsPage(){
-    const productIds = [1,2,3,4,5,6,7,8,9,10];
-    return (<div>
-        <h1>Products Page</h1>
-        <ul>
-            {productIds.map((id)=>(
-                <li key={id}>
-                    <Link href={`/products/${id}`} >
-                        View Product {id}
-                    </Link>
-                </li>
-            ))}
-        </ul> 
-    </div>)
+export default async function ProductsPage(){
+    const res = await fetch("https://dummyjson.com/products",{
+        cache:"force-cache"
+    })
+
+    const data =  await res.json();
+    const products =  data.products;
+
+    return (
+        <div className="p-5px">
+            <h1>Products</h1>
+            <ul className="m-8">
+                {products.map((product)=>(
+                    <li key={product.id}>
+                        <Link href={`/products/${product.id}`} >
+                            {product.title}
+                        </Link>
+                    </li>
+                ))}
+            </ul> 
+        </div>)
 }
