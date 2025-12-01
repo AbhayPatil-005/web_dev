@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 
 const productpage=async({params})=>{
 
@@ -12,9 +12,12 @@ const productpage=async({params})=>{
     return (
         <div>
             <h1>{product.title}</h1>
+            <Image src={"/image.png"} 
+                width={500}
+                height={500}
+            />
             <p>{product.description}</p>
             <p><strong>Price: </strong> ${product.price}</p>
-
             <a href='/products'> Back to products</a>
         </div>
     )
