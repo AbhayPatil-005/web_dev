@@ -1,5 +1,15 @@
 import Image from "next/image";
 
+export async function generateMetadata({params}){
+    const { id } = await params;
+
+    const res = await fetch(`https://dummyjson.com/products/${id}`);
+    const product = await res.json();
+    return {
+    "title": `${product.title} - Products Store`,
+    }
+}
+
 const productpage=async({params})=>{
 
     const {id} = await params;
@@ -13,6 +23,7 @@ const productpage=async({params})=>{
         <div>
             <h1>{product.title}</h1>
             <Image src={"/image.png"} 
+                alt="product"
                 width={500}
                 height={500}
             />
